@@ -1,4 +1,4 @@
-//найти индексы первого максимального числа в массиве дано n строк, m целых чисел в строке и сами числа.
+//найти индексы первого максимального числа в массиве дано n строк, m целых чисел в строке и сами числа(не больше 100).
 package Array;
 import java.util.Scanner;
 
@@ -7,13 +7,14 @@ public class array_12 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int m = scanner.nextInt();
-        int res = 0;
-        int num = 0;
+
+        int num;
         int a = 0;
         int b = 0;
         int i = 0;
         int j = 0;
         int[][] arr = new int[n][m];
+        int res = -2147483648;
         for(j = 0; j < n; j++) {
             for (i = 0; i < m; i++) {
                 num = scanner.nextInt();
