@@ -1,6 +1,5 @@
 //проверка правильности решения судоку
 package Array;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 import java.util.Arrays;
@@ -64,5 +63,36 @@ public class array_19 {
             }
         }
         System.out.println(res);
+        System.out.println();
+        int a = 0;
+
+        int [] ar3 = new int[n*n];              //просмотр квадратов
+
+
+        for(int k = 0; k < n; k++) {
+            int c = 0;
+            int b = a;
+            for (int i = a; i < n + b; i++) {
+                for (int j = 0; j < n; j++) {
+                    ar3[c] = arr[j][i];
+                    System.out.print(ar3[c] + " ");
+                    c++;
+                }
+                a++;
+            }
+            Arrays.sort(ar3);
+            //сравнение массивов
+            if (Arrays.equals(norm, ar3)) {
+                System.out.println("YES");
+                res = "YES";
+            } else {
+                System.out.println("NO");
+                res = "NO";
+                //break;
+            }
+        }
+        System.out.println();
+        System.out.println(a + "a");
+        //System.out.println(b + "b");
     }
 }
