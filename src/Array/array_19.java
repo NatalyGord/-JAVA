@@ -64,35 +64,39 @@ public class array_19 {
         }
         System.out.println(res);
         System.out.println();
-        int a = 0;
 
+        int v = 0;
         int [] ar3 = new int[n*n];              //просмотр квадратов
-
-
-        for(int k = 0; k < n; k++) {
-            int c = 0;
-            int b = a;
-            for (int i = a; i < n + b; i++) {
-                for (int j = 0; j < n; j++) {
-                    ar3[c] = arr[j][i];
-                    System.out.print(ar3[c] + " ");
-                    c++;
+        for(int g = 0; g < n; g++) {
+            int a = 0;
+            int num = v;
+            for (int k = 0; k < n; k++) {
+                int c = 0;
+                int b = a;
+                for (int i = a; i < n + b; i++) {
+                    for (int j = num; j < n + num; j++) {
+                        ar3[c] = arr[j][i];
+                        System.out.print(ar3[c] + " ");
+                        c++;
+                    }
+                    a++;
                 }
-                a++;
+                v++;
+                Arrays.sort(ar3);
+                //сравнение массивов
+                if (Arrays.equals(norm, ar3)) {
+                    System.out.println("YES");
+                    res = "YES";
+                } else {
+                    System.out.println("NO");
+                    res = "NO";
+                    break;
+                }
             }
-            Arrays.sort(ar3);
-            //сравнение массивов
-            if (Arrays.equals(norm, ar3)) {
-                System.out.println("YES");
-                res = "YES";
-            } else {
-                System.out.println("NO");
-                res = "NO";
-                //break;
-            }
+
+            System.out.println();
+            System.out.println(a + "a");
+            System.out.println(v + "v");
         }
-        System.out.println();
-        System.out.println(a + "a");
-        //System.out.println(b + "b");
     }
 }
