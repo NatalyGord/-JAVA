@@ -1,3 +1,7 @@
+//вывести матрицу того же размера,
+// где каждый элемент в положении , (i, j)равен сумме элементов первой матрицы
+// на позициях (i-1, j)(i+1, j)(i, j-1), (i, j+1)
+//для квадратной матрицы
 package Array;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -41,11 +45,9 @@ public class array_22 {
                     if (j == 0) {
                         if (i == 0) {
                             arr2[i][j] = arr[m - 1][j] + arr[i + 1][j] + arr[i][m - 1] + arr[i][j + 1];
-                            //System.out.println(arr[m - 1][j] + " " + arr[i + 1][j] + " " + arr[i][m - 1] + " " + arr[i][j + 1] + " 0.0");
                         } else {
                             if (i == m - 1) {
                                 arr2[i][j] = arr[i - 1][j] + arr[0][j] + arr[i][m - 1] + arr[i][j + 1];
-                                //System.out.println(arr[i - 1][j] + " " + arr[0][j] + " " + arr[i][m - 1] + " " + arr[i][j + 1] + " - 1.0");
 
                             } else {
                                 arr2[i][j] = arr[i - 1][j] + arr[i + 1][j] + arr[i][m - 1] + arr[i][j + 1];
@@ -55,11 +57,9 @@ public class array_22 {
                         if (j == m - 1) {
                             if (i == 0) {
                                 arr2[i][j] = arr[m - 1][j] + arr[i + 1][j] + arr[i][j - 1] + arr[i][0];
-                                //System.out.println(arr[m - 1][j] + " " + arr[i + 1][j] + " " + arr[i][j - 1] + " " + arr[i][0] + " - 0.1");
                             } else {
                                 if (i == m - 1) {
                                     arr2[i][j] = arr[i - 1][j] + arr[0][j] + arr[i][j - 1] + arr[i][0];
-                                   // System.out.println(arr[i - 1][j] + " " + arr[0][j] + " " + arr[i][j - 1] + " " + arr[i][0] + " - 1.1");
                                 } else {
                                     arr2[i][j] = arr[i - 1][j] + arr[i + 1][j] + arr[i][j - 1] + arr[i][0];
                                 }
