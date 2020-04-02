@@ -13,6 +13,7 @@ public class array_23 {
                 arr[i][j] = j - i;
                 arr[j][i] = j - i;
             }
+
         }
         for(int b = 0; b < n; b++){
             for(int k = 0; k < n; k++){
