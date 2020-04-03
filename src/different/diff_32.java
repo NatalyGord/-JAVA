@@ -1,15 +1,21 @@
 //угадай число
 package different;
-
 import java.util.Scanner;
 
 public class diff_32 {
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Ваша задача угадать число");
-        System.out.println("Введите до какого числа загадываем");
-        int range = scanner.nextInt();    //10;
-        int number = (int)(Math.random() * range);
+        //int range = 100;
+        for(int i = 10; i <= 30; i += 10) {
+            int number = (int) (Math.random() * i);
+            playLvl(i, number);
+        }
+        System.out.println("Вы выиграли!!!");
+        scanner.close();
+    }
+    private static void playLvl(int range, int number){
         while(true){
             System.out.println("Угадайте число от 0 до " + range);
             int imp = scanner.nextInt();
@@ -26,6 +32,5 @@ public class diff_32 {
                 }
             }
         }
-        scanner.close();
     }
 }
