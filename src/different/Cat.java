@@ -1,3 +1,4 @@
+//драка котов выигрывает тот у кого больше параметров больше
 package different;
 
 public class Cat {
