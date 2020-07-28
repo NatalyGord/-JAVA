@@ -9,6 +9,24 @@ public class Student {
   double averageEconomy;
   double averageLanguage;
 
+  Student(int numStud1, String name1, String surname1, int yearStudy1, double averageMath1, double averageEconomy1, double averageLanguage1){
+    numStud = numStud1;
+    name = name1;
+    surname = surname1;
+    yearStudy = yearStudy1;
+    averageMath = averageMath1;
+    averageEconomy = averageEconomy1;
+    averageLanguage = averageLanguage1;
+    System.out.println("!");
+  }
+  Student(int numStud2, String name2, String surname2, int yearStudy2){
+    this(numStud2, name2, surname2, yearStudy2, 0.0, 0.0, 0.0);
+    System.out.println("часть параметров");
+  }
+  Student(){
+    System.out.println("конструктор без параметров");
+  }
+
   void averageGrade(Student st){
     System.out.println(st.numStud + " " + st.surname + " " + st.name + " Год обучения: " + st.yearStudy + " Средняя оценка: " + (st.averageMath + st.averageEconomy + st.averageLanguage)/3);
   }
@@ -44,5 +62,10 @@ class StudentTest{
     st1.averageGrade(st1);
     st2.averageGrade(st2);
     st3.averageGrade(st3);
+
+
+    Student stud = new Student();
+    Student stud2 = new Student(10, "Ivan", "Petrov", 2);
+    Student stud3 = new Student(10, "Ivan", "Petrov", 2, 4.5, 3.7, 4.2);
   }
 }
