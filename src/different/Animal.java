@@ -2,6 +2,7 @@
 package different;
 
 public class Animal {
+  public boolean name;
   int eyes;
 
   Animal(){
